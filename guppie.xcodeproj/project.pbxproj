@@ -1,0 +1,301 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5574A6DC1625F4AE00253DBE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5574A6DB1625F4AE00253DBE /* Cocoa.framework */; };
+		5574A6E61625F4AE00253DBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5574A6E41625F4AE00253DBE /* InfoPlist.strings */; };
+		5574A6E81625F4AE00253DBE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5574A6E71625F4AE00253DBE /* main.m */; };
+		5574A6EC1625F4AE00253DBE /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 5574A6EA1625F4AE00253DBE /* Credits.rtf */; };
+		5574A6EF1625F4AE00253DBE /* SAGUPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5574A6EE1625F4AE00253DBE /* SAGUPAppDelegate.m */; };
+		5574A6F21625F4AF00253DBE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5574A6F01625F4AF00253DBE /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5574A6D71625F4AE00253DBE /* guppie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = guppie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5574A6DB1625F4AE00253DBE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		5574A6DE1625F4AE00253DBE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		5574A6DF1625F4AE00253DBE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		5574A6E01625F4AE00253DBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5574A6E31625F4AE00253DBE /* guppie-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "guppie-Info.plist"; sourceTree = "<group>"; };
+		5574A6E51625F4AE00253DBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5574A6E71625F4AE00253DBE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5574A6E91625F4AE00253DBE /* guppie-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "guppie-Prefix.pch"; sourceTree = "<group>"; };
+		5574A6EB1625F4AE00253DBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		5574A6ED1625F4AE00253DBE /* SAGUPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SAGUPAppDelegate.h; sourceTree = "<group>"; };
+		5574A6EE1625F4AE00253DBE /* SAGUPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SAGUPAppDelegate.m; sourceTree = "<group>"; };
+		5574A6F11625F4AF00253DBE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5574A6D41625F4AE00253DBE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5574A6DC1625F4AE00253DBE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5574A6CC1625F4AE00253DBE = {
+			isa = PBXGroup;
+			children = (
+				5574A6E11625F4AE00253DBE /* guppie */,
+				5574A6DA1625F4AE00253DBE /* Frameworks */,
+				5574A6D81625F4AE00253DBE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5574A6D81625F4AE00253DBE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5574A6D71625F4AE00253DBE /* guppie.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5574A6DA1625F4AE00253DBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5574A6DB1625F4AE00253DBE /* Cocoa.framework */,
+				5574A6DD1625F4AE00253DBE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5574A6DD1625F4AE00253DBE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5574A6DE1625F4AE00253DBE /* AppKit.framework */,
+				5574A6DF1625F4AE00253DBE /* CoreData.framework */,
+				5574A6E01625F4AE00253DBE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		5574A6E11625F4AE00253DBE /* guppie */ = {
+			isa = PBXGroup;
+			children = (
+				5574A6ED1625F4AE00253DBE /* SAGUPAppDelegate.h */,
+				5574A6EE1625F4AE00253DBE /* SAGUPAppDelegate.m */,
+				5574A6F01625F4AF00253DBE /* MainMenu.xib */,
+				5574A6E21625F4AE00253DBE /* Supporting Files */,
+			);
+			path = guppie;
+			sourceTree = "<group>";
+		};
+		5574A6E21625F4AE00253DBE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5574A6E31625F4AE00253DBE /* guppie-Info.plist */,
+				5574A6E41625F4AE00253DBE /* InfoPlist.strings */,
+				5574A6E71625F4AE00253DBE /* main.m */,
+				5574A6E91625F4AE00253DBE /* guppie-Prefix.pch */,
+				5574A6EA1625F4AE00253DBE /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5574A6D61625F4AE00253DBE /* guppie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5574A6F51625F4AF00253DBE /* Build configuration list for PBXNativeTarget "guppie" */;
+			buildPhases = (
+				5574A6D31625F4AE00253DBE /* Sources */,
+				5574A6D41625F4AE00253DBE /* Frameworks */,
+				5574A6D51625F4AE00253DBE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = guppie;
+			productName = guppie;
+			productReference = 5574A6D71625F4AE00253DBE /* guppie.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5574A6CE1625F4AE00253DBE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SAGUP;
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = SoupyApps;
+			};
+			buildConfigurationList = 5574A6D11625F4AE00253DBE /* Build configuration list for PBXProject "guppie" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 5574A6CC1625F4AE00253DBE;
+			productRefGroup = 5574A6D81625F4AE00253DBE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5574A6D61625F4AE00253DBE /* guppie */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5574A6D51625F4AE00253DBE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5574A6E61625F4AE00253DBE /* InfoPlist.strings in Resources */,
+				5574A6EC1625F4AE00253DBE /* Credits.rtf in Resources */,
+				5574A6F21625F4AF00253DBE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5574A6D31625F4AE00253DBE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5574A6E81625F4AE00253DBE /* main.m in Sources */,
+				5574A6EF1625F4AE00253DBE /* SAGUPAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5574A6E41625F4AE00253DBE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5574A6E51625F4AE00253DBE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5574A6EA1625F4AE00253DBE /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5574A6EB1625F4AE00253DBE /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		5574A6F01625F4AF00253DBE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5574A6F11625F4AF00253DBE /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5574A6F31625F4AF00253DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		5574A6F41625F4AF00253DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		5574A6F61625F4AF00253DBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "guppie/guppie-Prefix.pch";
+				INFOPLIST_FILE = "guppie/guppie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5574A6F71625F4AF00253DBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "guppie/guppie-Prefix.pch";
+				INFOPLIST_FILE = "guppie/guppie-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5574A6D11625F4AE00253DBE /* Build configuration list for PBXProject "guppie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5574A6F31625F4AF00253DBE /* Debug */,
+				5574A6F41625F4AF00253DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5574A6F51625F4AF00253DBE /* Build configuration list for PBXNativeTarget "guppie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5574A6F61625F4AF00253DBE /* Debug */,
+				5574A6F71625F4AF00253DBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5574A6CE1625F4AE00253DBE /* Project object */;
+}
