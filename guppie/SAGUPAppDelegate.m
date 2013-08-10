@@ -41,11 +41,7 @@ void GetSystemVersion( long *major, long *minor, long *bugfix )
 
 
 @implementation SAGUPAppDelegate
-@synthesize URLLabel;
-@synthesize _statusMenu;
-@synthesize uploadMenuItem = _uploadMenuItem;
-@synthesize screenCaptureMenuItem = _screenCaptureMenuItem;
-@synthesize URLPopover;
+
 
 - (void)awakeFromNib {
 	
@@ -65,8 +61,8 @@ void GetSystemVersion( long *major, long *minor, long *bugfix )
 	
 	[_statusItemView setStatusItem:_statusItem];
 
-	[_statusItemView setMenu:_statusMenu];
-	[_statusMenu setAutoenablesItems:FALSE];
+	[_statusItemView setMenu:self.statusMenu];
+	[self.statusMenu setAutoenablesItems:FALSE];
 	
 	_prefsWindow = [[SAGUPPreferencesWC alloc] initWithWindowNibName:@"SAGUPPreferences"];
 	
@@ -248,11 +244,11 @@ void GetSystemVersion( long *major, long *minor, long *bugfix )
 
 -(void)connection:(NSURLConnection*)connection didReceiveResponse:(NSURLResponse*)response
 {
-	_responseData = [[NSMutableData alloc] init]; // _data being an ivar
+	responseData = [[NSMutableData alloc] init]; // _data being an ivar
 }
 -(void)connection:(NSURLConnection*)connection didReceiveData:(NSData*)data
 {
-	[_responseData appendData:data];
+	[responseData appendData:data];
 }
 -(void)connection:(NSURLConnection*)connection didFailWithError:(NSError*)error
 {
@@ -274,12 +270,15 @@ void GetSystemVersion( long *major, long *minor, long *bugfix )
 	[NSApp hide:self];
 
 	// get resulting JSON
-	NSString *JSONString = [[NSString alloc] initWithData:_responseData encoding:NSUTF8StringEncoding];
+//	NSString *JSONString = [[NSString alloc] initWithData:responseData encoding:NSUTF8StringEncoding];
 	
-	NSLog(@"Request Return: %@", JSONString);
 	
 	// dig down into result and retrieve imgur page URL
-	NSDictionary *responseDict = [JSONString JSONValue];
+//	NSDictionary *responseDict = [JSONString JSONValue];
+
+	NSLog(@"Request Return: %@", responseData);
+	NSError *error;
+	NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseData options:nil error:&error];
 	NSDictionary *uploadDict = [responseDict objectForKey:@"upload"];
 	NSDictionary *linksDict = [uploadDict objectForKey:@"links"];
 	NSString *imgurPageURL = [linksDict objectForKey:@"imgur_page"];
@@ -293,7 +292,7 @@ void GetSystemVersion( long *major, long *minor, long *bugfix )
 	if (_OSVersionMinor < 8) {
 		// set up popover for showing resulting URL
 		[self performSelector:@selector(hidePopover:) withObject:nil afterDelay:7.0];
-		[[self URLPopover] showRelativeToRect:[_statusItemView bounds] ofView:_statusItemView preferredEdge:NSMaxYEdge];
+		[self.URLPopover showRelativeToRect:[_statusItemView bounds] ofView:_statusItemView preferredEdge:NSMaxYEdge];
 	} else {
 		
 		[NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(sendNotification:) userInfo:[NSArray arrayWithObjects:imgurPageURL, _curFilename, nil] repeats:FALSE];
@@ -325,14 +324,14 @@ void GetSystemVersion( long *major, long *minor, long *bugfix )
 	_uploadInProgress = boolval;
 	
 	[_statusItemView setUploadInProgress:boolval];
-	[[self uploadMenuItem] setEnabled:!_uploadInProgress];
-	[[self screenCaptureMenuItem] setEnabled:!_uploadInProgress];
+	[self.uploadMenuItem setEnabled:!_uploadInProgress];
+	[self.screenCaptureMenuItem setEnabled:!_uploadInProgress];
 	
 	if (!_uploadInProgress) {
-		[_uploadMenuItem setTitle:@"Upload to imgur..."];
+		[self.uploadMenuItem setTitle:@"Upload to imgur..."];
 		[_progressUpdateTimer invalidate];
 	} else {
-		_progressUpdateTimer = [NSTimer timerWithTimeInterval:0.2 target:self selector:@selector(updateMenu:) userInfo:[self uploadMenuItem] repeats:YES];
+		_progressUpdateTimer = [NSTimer timerWithTimeInterval:0.2 target:self selector:@selector(updateMenu:) userInfo:self.uploadMenuItem repeats:YES];
 		[[NSRunLoop currentRunLoop] addTimer:_progressUpdateTimer forMode:NSDefaultRunLoopMode];
 		[[NSRunLoop currentRunLoop] addTimer:_progressUpdateTimer forMode:NSEventTrackingRunLoopMode];
 	}
@@ -345,7 +344,7 @@ void GetSystemVersion( long *major, long *minor, long *bugfix )
 
 
 -(void)hidePopover:(id)sender {
-	[[self URLPopover] performClose:nil];
+	[self.URLPopover performClose:nil];
 }
 
 -(void)uploadFileHotKeyEvent:(NSEvent *)ev {

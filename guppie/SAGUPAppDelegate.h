@@ -9,7 +9,7 @@
 #import <Carbon/Carbon.h>
 #import <Cocoa/Cocoa.h>
 
-#import "SBJson.h"
+//#import "SBJson.h"
 #import "DDHotKeyCenter.h"
 #import "SAGUPPreferencesWC.h"
 
@@ -20,7 +20,7 @@
 	NSStatusItem 			*_statusItem;
 	SAGUPStatusItemView 	*_statusItemView;
 	NSImage 					*_statusImage;
-	NSMutableData 			*_responseData;
+	NSMutableData 			*responseData;
 	BOOL						_uploadInProgress;
 	NSString					*_curFilename;
 	NSString 				*_progressMsg;
@@ -38,7 +38,7 @@
 @property (weak) IBOutlet NSPopover *URLPopover;
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *URLLabel;
-@property (weak) IBOutlet NSMenu *_statusMenu;
+@property (weak) IBOutlet NSMenu *statusMenu;
 @property (weak) IBOutlet NSMenuItem *uploadMenuItem;
 @property (weak) IBOutlet NSMenuItem *screenCaptureMenuItem;
 
